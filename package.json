@@ -1,6 +1,7 @@
 {
   "name": "@bajra-manandhar17/my-app",
   "version": "0.1.0",
+  "type": "module",
   "typings": "lib/index.d.ts",
   "module": "lib/index.js",
   "sideEffects": true,
