@@ -16,7 +16,7 @@ jobs:
           node-version: 18
       - name: Build Package
         run: |
-          yarn add --global rollup
+          yarn add rollup
           yarn prepublishOnly
 
   release:
