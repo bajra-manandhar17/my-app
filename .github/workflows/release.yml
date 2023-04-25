@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 18
       - name: Build Package
-        run: npm ci && npm run build
+        run: yarn prepublishOnly
 
   release:
     needs: build
@@ -44,9 +44,8 @@ jobs:
           git config --global user.email "${{ github.actor }}@noreply.github.com"
           git config --global user.name "${{ github.actor }}"
           echo "${{ steps.bump_version.outputs.tag }}"
-      - run: rm -rf ./dist
-      - run: npm ci && npm run build
-      - run: npm publish
+      - run: yarn prepublishOnly
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
