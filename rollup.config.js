@@ -72,9 +72,9 @@ export default [
     ],
     output: [
       {
+        format: 'cjs',
         dir: 'lib',
         sourcemap: true,
-        format: 'esm',
         preserveModules: true,
         exports: 'auto',
       },
@@ -84,8 +84,8 @@ export default [
     plugins: [dts(dtsOps)],
     output: [
       {
+        format: 'cjs',
         dir: 'lib',
-        format: 'esm',
         preserveModules: true,
         exports: 'auto',
       },
@@ -95,8 +95,8 @@ export default [
     plugins: [dts(dtsOps)],
     output: [
       {
+        format: 'cjs',
         dir: 'lib/icons',
-        format: 'esm',
         preserveModules: true,
         exports: 'auto',
       },
